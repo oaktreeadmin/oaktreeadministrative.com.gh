@@ -245,30 +245,89 @@
     <main class="careers-container">
         <!-- Open Positions Section -->
         <section class="job-listings">
-            <h2>Current Openings</h2>
+    <h2>Current Openings</h2>
 
-            <!-- Job 1 -->
-            <div class="job-card">
-                <h3>Administrative Support Assistant</h3>
-                <div class="job-meta">
-                    <span><i class="fa-solid fa-location-dot"></i> Remote / Ghana Support Hub</span>
-                    <span><i class="fa-solid fa-clock"></i> Full-Time</span>
-                </div>
-                <p>We are seeking an organized, details-driven individual to manage structured professional correspondence, balance virtual logs, organize client data pipelines, and keep corporate communications moving fluidly.</p>
-                <a href="#" class="btn-sm">Apply Now</a>
-            </div>
+    <!-- Job 1 -->
+    <div class="job-card" style="border-left: 5px solid #1b4332;">
+        <h3>Administrative Support Assistant</h3>
+        <div class="job-meta">
+            <span><i class="fa-solid fa-location-dot"></i> Remote / Ghana Support Hub</span>
+            <span><i class="fa-solid fa-clock"></i> Full-Time</span>
+        </div>
+        <p>We are seeking an organized, details-driven individual to manage structured professional correspondence, balance virtual logs, organize client data pipelines, and keep corporate communications moving fluidly.</p>
+        <button class="btn-sm text-white border-0 py-2 px-4 rounded-pill" style="background-color: #1b4332; font-weight: bold; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#applyModal" data-job="Administrative Support Assistant">Apply Now</button>
+    </div>
 
-            <!-- Job 2 -->
-            <div class="job-card">
-                <h3>Data Asset Coordinator</h3>
-                <div class="job-meta">
-                    <span><i class="fa-solid fa-location-dot"></i> Remote</span>
-                    <span><i class="fa-solid fa-clock"></i> Part-Time</span>
-                </div>
-                <p>Looking for a meticulous data handler to accurately audit logs, organize client records, and manage security updates for digital document reserves.</p>
-                <a href="#" class="btn-sm">Apply Now</a>
+    <!-- Job 2 -->
+    <div class="job-card mt-4" style="border-left: 5px solid #1b4332;">
+        <h3>Data Asset Coordinator</h3>
+        <div class="job-meta">
+            <span><i class="fa-solid fa-location-dot"></i> Remote</span>
+            <span><i class="fa-solid fa-clock"></i> Part-Time</span>
+        </div>
+        <p>Looking for a meticulous data handler to accurately audit logs, organize client records, and manage security updates for digital document reserves.</p>
+        <button class="btn-sm text-white border-0 py-2 px-4 rounded-pill" style="background-color: #1b4332; font-weight: bold; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#applyModal" data-job="Data Asset Coordinator">Apply Now</button>
+    </div>
+</section>
+
+<!-- ========================================================== -->
+<!-- POPUP MODAL & SCRIPT (Paste this right below the section) -->
+<!-- ========================================================== -->
+<div class="modal fade" id="applyModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow" style="font-family: sans-serif;">
+            <div class="modal-header text-white p-4" style="background-color: #1b4332;">
+                <h5 class="modal-title fw-bold" style="margin: 0; font-size: 1.25rem;">Job Application Form</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1); background-color: transparent; border: 0; font-size: 1.5rem; cursor: pointer;">&times;</button>
             </div>
-        </section>
+            <div class="modal-body p-4" style="text-align: left;">
+                <form id="applicationForm">
+                    <div class="mb-3" style="margin-bottom: 1rem;">
+                        <label class="form-label fw-bold text-secondary small" style="display: block; margin-bottom: 0.5rem; font-weight: bold; color: #6c757d;">Position Applied For</label>
+                        <input type="text" class="form-control bg-light fw-bold text-dark" id="modalJobTitle" readonly style="width: 100%; padding: 0.375rem 0.75rem; border: 1px solid #ced4da; border-radius: 0.25rem; background-color: #f8f9fa; font-weight: bold;">
+                    </div>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                        <div style="flex: 1;">
+                            <label class="form-label small fw-bold text-muted" style="display: block; margin-bottom: 0.5rem; color: #6c757d;">First Name</label>
+                            <input type="text" class="form-control" required placeholder="John" style="width: 100%; padding: 0.375rem 0.75rem; border: 1px solid #ced4da; border-radius: 0.25rem;">
+                        </div>
+                        <div style="flex: 1;">
+                            <label class="form-label small fw-bold text-muted" style="display: block; margin-bottom: 0.5rem; color: #6c757d;">Last Name</label>
+                            <input type="text" class="form-control" required placeholder="Doe" style="width: 100%; padding: 0.375rem 0.75rem; border: 1px solid #ced4da; border-radius: 0.25rem;">
+                        </div>
+                    </div>
+                    <div class="mb-3" style="margin-bottom: 1rem;">
+                        <label class="form-label small fw-bold text-muted" style="display: block; margin-bottom: 0.5rem; color: #6c757d;">Email Address</label>
+                        <input type="email" class="form-control" required placeholder="name@example.com" style="width: 100%; padding: 0.375rem 0.75rem; border: 1px solid #ced4da; border-radius: 0.25rem;">
+                    </div>
+                    <div class="mb-3" style="margin-bottom: 1rem;">
+                        <label class="form-label small fw-bold text-muted" style="display: block; margin-bottom: 0.5rem; color: #6c757d;">Phone Number</label>
+                        <input type="tel" class="form-control" required placeholder="+233 ..." style="width: 100%; padding: 0.375rem 0.75rem; border: 1px solid #ced4da; border-radius: 0.25rem;">
+                    </div>
+                    <div class="mb-4" style="margin-bottom: 1.5rem;">
+                        <label class="form-label small fw-bold text-muted" style="display: block; margin-bottom: 0.5rem; color: #6c757d;">Upload Resume (PDF, DOCX)</label>
+                        <input class="form-control" type="file" required style="width: 100%; padding: 0.375rem 0.75rem; border: 1px solid #ced4da; border-radius: 0.25rem;">
+                    </div>
+                    <button type="submit" class="btn fw-bold text-white py-2" style="width: 100%; padding: 0.5rem; border: 0; border-radius: 0.25rem; font-weight: bold; color: white; background-color: #1b4332; cursor: pointer;">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const applyModal = document.getElementById('applyModal');
+        if (applyModal) {
+            applyModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget;
+                const jobTitle = button.getAttribute('data-job');
+                const modalInput = document.getElementById('modalJobTitle');
+                modalInput.value = jobTitle;
+            });
+        }
+    });
+</script>
 
         <!-- Sidebar Section -->
         <aside class="sidebar-box">
