@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | Oaktree Administrative Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #1b4332;
+            --primary-light: #2d6a4f;
+            --accent: #52b788;
+            --light-bg: #f4f9f4;
+            --dark-text: #1d2d24;
+            --glass: rgba(255, 255, 255, 0.85);
+            --shadow: 0 8px 32px 0 rgba(27, 67, 50, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+            padding-top: 8rem;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1.2rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-light);
+        }
+
+        /* Page Header */
+        .page-header {
+            text-align: center;
+            padding: 3rem 10%;
+            background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+            color: white;
+            margin-bottom: 4rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            color: #d8f3dc;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Careers Content Layout */
+        .careers-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 6rem;
+        }
+
+        /* Job Listings */
+        .job-listings h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .job-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--accent);
+            transition: transform 0.3s ease;
+        }
+
+        .job-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .job-meta {
+            display: flex;
+            gap: 1.5rem;
+            color: #6c7a70;
+            font-size: 0.9rem;
+            margin: 0.5rem 0 1rem 0;
+        }
+
+        .job-meta span i {
+            margin-right: 5px;
+            color: var(--primary-light);
+        }
+
+        .job-card p {
+            color: #4a5d51;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-sm {
+            display: inline-block;
+            padding: 0.6rem 1.5rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .btn-sm:hover {
+            background-color: var(--primary-light);
+        }
+
+        /* Sidebar Info */
+        .sidebar-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            height: fit-content;
+        }
+
+        .sidebar-box h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .sidebar-box p {
+            font-size: 0.95rem;
+            color: #4a5d51;
+            margin-bottom: 1.5rem;
+        }
+
+        .culture-list {
+            list-style: none;
+        }
+
+        .culture-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+
+        .culture-list li i {
+            color: var(--accent);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .careers-container {
+                grid-template-columns: 1fr;
+            }
+            body { padding-top: 6rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <i class="fa-solid fa-tree"></i> Oaktree Admin
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="careers.html" class="active">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Join Our Global Team</h1>
+        <p>Discover fulfilling, flexible roles designed to optimize operations for businesses worldwide.</p>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="careers-container">
+        <!-- Open Positions Section -->
+        <section class="job-listings">
+            <h2>Current Openings</h2>
+
+            <!-- Job 1 -->
+            <div class="job-card">
+                <h3>Administrative Support Assistant</h3>
+                <div class="job-meta">
+                    <span><i class="fa-solid fa-location-dot"></i> Remote / Ghana Support Hub</span>
+                    <span><i class="fa-solid fa-clock"></i> Full-Time</span>
+                </div>
+                <p>We are seeking an organized, details-driven individual to manage structured professional correspondence, balance virtual logs, organize client data pipelines, and keep corporate communications moving fluidly.</p>
+                <a href="#" class="btn-sm">Apply Now</a>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="job-card">
+                <h3>Data Asset Coordinator</h3>
+                <div class="job-meta">
+                    <span><i class="fa-solid fa-location-dot"></i> Remote</span>
+                    <span><i class="fa-solid fa-clock"></i> Part-Time</span>
+                </div>
+                <p>Looking for a meticulous data handler to accurately audit logs, organize client records, and manage security updates for digital document reserves.</p>
+                <a href="#" class="btn-sm">Apply Now</a>
+            </div>
+        </section>
+
+        <!-- Sidebar Section -->
+        <aside class="sidebar-box">
+            <h3>Why Work With Us?</h3>
+            <p>At Oaktree Administrative Services, we invest heavily in process integrity and team growth.</p>
+            <ul class="culture-list">
+                <li><i class="fa-solid fa-check"></i> 100% Secure Remote Work</li>
+                <li><i class="fa-solid fa-check"></i> Continuous Upskilling Tracks</li>
+                <li><i class="fa-solid fa-check"></i> Collaborative Team Culture</li>
+                <li><i class="fa-solid fa-check"></i> Flexible Health Benefits</li>
+            </ul>
+        </aside>
+    </main>
+
+</body>
+</html>

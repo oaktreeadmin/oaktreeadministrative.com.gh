@@ -1,1 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oaktree Administrative Services | Professional Business Support</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #1b4332;
+            --primary-light: #2d6a4f;
+            --accent: #52b788;
+            --light-bg: #f4f9f4;
+            --dark-text: #1d2d24;
+            --glass: rgba(255, 255, 255, 0.85);
+            --shadow: 0 8px 32px 0 rgba(27, 67, 50, 0.1);
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1.2rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 12rem 10% 8rem 10%;
+            background: linear-gradient(135deg, rgba(244,249,244,1) 0%, rgba(216,243,220,0.6) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 85vh;
+            gap: 4rem;
+        }
+
+        .hero-content {
+            flex: 1;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            color: #4a5d51;
+            margin-bottom: 2.5rem;
+            max-width: 550px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(27, 67, 50, 0.2);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(27, 67, 50, 0.3);
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            animation: fadeInRight 1.2s ease;
+        }
+
+        /* Dynamic SVG Vector representation of our Custom Banner */
+        .hero-svg {
+            width: 100%;
+            max-width: 550px;
+            filter: drop-shadow(var(--shadow));
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 10%;
+            background-color: white;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+            margin: 0.5rem auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .card {
+            background: var(--light-bg);
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: white;
+            box-shadow: var(--shadow);
+            border-color: rgba(82, 183, 136, 0.3);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: var(--primary-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Mobile Responsive adjustment */
+        @media (max-width: 968px) {
+            nav { padding: 1.2rem 5%; }
+            .hero { flex-direction: column; text-align: center; padding-top: 10rem; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .hero-content p { margin: 0 auto 2.5rem auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="careers.html">Careers</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Efficient. Intelligent. Dependable.</h1>
+            <p>Streamlining your corporate ecosystem with premium remote administrative support, document logistics, data asset management, and expert operational pipelines.</p>
+            <a href="#" class="btn">Explore Our Solutions</a>
+        </div>
+        <div class="hero-image">
+            <!-- Sleek modern geometry vector representation -->
+            <svg class="hero-svg" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+                <rect width="500" height="400" rx="20" fill="#1b4332" />
+                <circle cx="120" cy="200" r="90" fill="#2d6a4f" opacity="0.6"/>
+                <circle cx="150" cy="180" r="60" fill="#52b788" opacity="0.4"/>
+                <path d="M120 110 L120 290 M70 200 L170 200" stroke="#fff" stroke-width="3" opacity="0.3"/>
+                <!-- Corporate elements text representations -->
+                <text x="260" y="180" fill="#fff" font-family="'Inter', sans-serif" font-weight="700" font-size="28">Oaktree</text>
+                <text x="260" y="215" fill="#52b788" font-family="'Inter', sans-serif" font-weight="500" font-size="16">Administrative Services</text>
+                <rect x="260" y="245" width="140" height="35" rx="17.5" fill="#2d6a4f" />
+                <text x="282" y="267" fill="#fff" font-family="'Inter', sans-serif" font-weight="600" font-size="12">Demo Platform</text>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Core Values / Features Section -->
+    <section class="features">
+        <h2 class="section-title">Why Enterprises Trust Oaktree</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Operational Scale</h3>
+                <p>We build efficient process automation frameworks that clear operational bottlenecks effortlessly.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Data Fidelity</h3>
+                <p>Your high-tier administrative pipelines are guarded with precision integrity protocols and complete discretion.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-user-tie"></i>
+                <h3>Elite Team Assets</h3>
+                <p>Connect immediately with skilled project managers and dedicated support experts trained to align with corporate workflows.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
