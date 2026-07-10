@@ -1,53 +1,104 @@
-<!-- Services Section Start -->
-<section id="services" class="services-section py-5 bg-light">
-    <div class="container py-4">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold text-dark">Our Services</h2>
-            <p class="text-muted mx-auto" style="max-width: 600px;">
-                Oakridge Administrative Services provides premier, tailored corporate support solutions to optimize your business operations and elevate efficiency.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Oakridge Administrative Services</title>
+    <!-- Standard Bootstrap CSS for modern layout styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for the professional icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-success" href="index.html">
+                Oakridge Admin
+            </a>
+            <button class="navbar-expand-lg border-0 bg-transparent d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold text-success" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header Hero Section -->
+    <header class="bg-dark text-white text-center py-5">
+        <div class="container py-3">
+            <h1 class="fw-bold display-4">Our Services</h1>
+            <p class="lead text-light-50">Professional administrative support solutions tailored to your enterprise.</p>
+        </div>
+    </header>
+
+    <!-- Main Services Grid Section -->
+    <main class="services-section py-5 bg-light">
+        <div class="container py-4">
+            <div class="row g-4">
+                
+                <!-- Service 1: Corporate Support -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 text-center">
+                        <div class="icon-box mb-3 text-success" style="font-size: 2.5rem;">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Corporate Support</h4>
+                        <p class="text-muted small">
+                            Comprehensive executive assistance, corporate schedule management, and optimized operational workflows designed to streamline daily business functions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 2: Document Management -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 text-center">
+                        <div class="icon-box mb-3 text-success" style="font-size: 2.5rem;">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Document Management</h4>
+                        <p class="text-muted small">
+                            Secure digital archiving, database coordination, and precise high-level reporting to ensure your critical corporate data remains organized and compliant.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 3: Strategic Consulting -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 text-center">
+                        <div class="icon-box mb-3 text-success" style="font-size: 2.5rem;">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Strategic Consulting</h4>
+                        <p class="text-muted small">
+                            Tailored operational consulting, performance metrics tracking, and corporate restructuring advisory to help scaling enterprises optimize resource allocation.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Professional Footer Section -->
+    <footer class="bg-dark text-white text-center py-4 border-top border-secondary">
+        <div class="container">
+            <p class="mb-2">&copy; 2026 Oakridge Administrative Services. All rights reserved.</p>
+            <p class="small text-muted mb-0">
+                Contact: +233 (54) 273-9507 | +233 (50) 372-9001
             </p>
         </div>
+    </footer>
 
-        <div class="row g-4">
-            <!-- Service 1: Corporate Support -->
-            <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm p-4 text-center">
-                    <div class="icon-box mb-3 text-success" style="font-size: 2.5rem;">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h4 class="fw-bold mb-3">Corporate Support</h4>
-                    <p class="text-muted small">
-                        Comprehensive executive assistance, schedule management, and operational workflows designed to streamline daily business functions.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Service 2: Document Management -->
-            <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm p-4 text-center">
-                    <div class="icon-box mb-3 text-success" style="font-size: 2.5rem;">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <h4 class="fw-bold mb-3">Document Management</h4>
-                    <p class="text-muted small">
-                        Secure digital archiving, database coordination, and high-level reporting to ensure your critical corporate data remains organized and compliant.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Service 3: Strategic Consulting -->
-            <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm p-4 text-center">
-                    <div class="icon-box mb-3 text-success" style="font-size: 2.5rem;">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h4 class="fw-bold mb-3">Strategic Consulting</h4>
-                    <p class="text-muted small">
-                        Tailored operational consulting and restructuring advisory to help scaling enterprises optimize resource allocation and performance tracking.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Services Section End -->
+    <!-- Bootstrap JS for mobile menu performance -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
